@@ -41,6 +41,7 @@ $(document).ready(function () {
 });
 
 
+
 // Carregar navbar
 fetch('../components/navbar.html')
 .then(response => response.text())
@@ -54,3 +55,6 @@ fetch('../components/footer.html')
 .then(data => {
     document.getElementById('footer-container').innerHTML = data;
 });
+
+
+
