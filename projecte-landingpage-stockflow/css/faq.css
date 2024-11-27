@@ -1,0 +1,141 @@
+/* General */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+nav {
+    background-color: #1e1e1e;
+    padding: 15px 0;
+}
+
+nav .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navbar a {
+    margin: 0 10px;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav .navbar a:hover {
+    color: #00bcd4;
+}
+
+.theme-toggle {
+    background-color: #00bcd4;
+    color: #ffffff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.theme-toggle:hover {
+    background-color: #0097a7;
+}
+
+/* FAQ Section */
+.faq-section {
+    margin: 40px 0;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.faq-search {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.faq-item {
+    background-color: #1e1e1e;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item:hover {
+    background-color: #333333;
+}
+
+.faq-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    margin-top: 10px;
+    color: #cccccc;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    opacity: 1;
+}
+
+.faq-favorite {
+    background: none;
+    border: none;
+    color: #00bcd4;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.faq-favorite.active {
+    color: #ffd700;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    text-align: center;
+    color: #cccccc;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
