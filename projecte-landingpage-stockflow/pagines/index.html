@@ -23,132 +23,135 @@
 
 
     <!-- hero section -->
-    <section id="home" class="min-h-100vh flex justify-start items-center">
-        <div class="mx-5 md-mx-l5">
-            <div class="inline-block br-round bg-indigo-30 indigo-lightest p-2 fs-s2 mb-5">
-                <div class="inline-block bg-indigo indigo-lightest br-round px-3 py-1 mr-3 fs-s3">Join Meet Up</div>
-                We are coming to Singapore. Learn more…
+    <section id="home" class="relative min-h-100vh flex justify-start items-center bg-black">
+        <!-- Video de fondo -->
+        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
+            <source src="../assets/videos/video_inventari.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de vídeos.
+        </video>
+    
+        <!-- Overlay oscuro con opacidad -->
+        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-60 z-10"></div>
+    
+        <!-- Contenido de la sección -->
+        <div class="relative z-20 mx-5 md:mx-l5">
+            <div class="inline-block br-round bg-gray-30 gray-lightest p-2 fs-s2 mb-5">
+                <div class="inline-block bg-gray gray-lightest br-round px-3 py-1 mr-3 fs-s3">Integració de inteligencia antificial</div>
+                S'incorporara en la nostra aplicació proximament
             </div>
             <div>
-                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900 ">Serve Your <br />Website Fast</h1>
-
-                <div class="br-8 mt-10 inline-flex">
-                    <input type="text"
-                        class="input-lg half bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 min-w-25vw br-r-0"
-                        placeholder="Email Address">
-                    <button
-                        class="button-lg bg-indigo-lightest-20 indigo-lightest focus-white fw-300 fs-s3 mr-0 br-l-0">Get
-                        Started</button>
-                </div>
-                <div class="white opacity-20 fs-s3 mt-3">No credit card required</span>
+                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900">Organitzar el teu inventari<br />En mes comoditat</h1>    
             </div>
         </div>
     </section>
+    
+
 
     <!-- features -->
     <section id="features" class="p-10 md-p-l5">
         <div class="flex flex-column md-flex-row mx-auto">
+            <!-- Feature 1: Gestión de Inventarios -->
             <div class="w-100pc md-w-40pc">
                 <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="inbox" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Storage</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    <a href="#"
-                        class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
+                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5">
+                        <i data-feather="inbox" class="w-l5"></i>
+                    </div>
+                    <h4 class="white fw-600 fs-m3 mb-5">Gestió d'Inventaris</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                        La nostra aplicació t'ofereix una manera senzilla i eficient de gestionar l'inventari de la teva empresa. 
+                        Controla les existències, evita desquadraments i pren decisions més informades amb dades en temps real.
+                    </div>
                 </div>
             </div>
+    
+            <!-- Feature 2: Documentació Automàtica -->
             <div class="w-100pc md-w-40pc">
                 <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="cpu" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Compute</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    <a href="#"
-                        class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
+                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5">
+                        <i data-feather="cpu" class="w-l5"></i>
+                    </div>
+                    <h4 class="white fw-600 fs-m3 mb-5">Documentació Automàtica</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                        Simplifica l'enviament i la gestió dels teus documents. Amb la nostra eina, podràs generar i enviar 
+                        factures, albarans i informes en qüestió de segons.
+                    </div>
                 </div>
             </div>
+    
+            <!-- Feature 3: Informació Segura -->
             <div class="w-100pc md-w-40pc">
                 <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5"><i
-                            data-feather="database" class="w-l5"></i></div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Database</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    <a href="#"
-                        class="mt-5 button bg-indigo-lightest-10 fs-s3 white no-underline hover-opacity-100 hover-scale-up-1 ease-300">Read</a>
+                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5">
+                        <i data-feather="database" class="w-l5"></i>
+                    </div>
+                    <h4 class="white fw-600 fs-m3 mb-5">Informació Segura</h4>
+                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                        Totes les teves dades es guarden de forma segura al núvol. Accedeix a la informació des de qualsevol lloc, 
+                        amb la tranquil·litat que la teva informació empresarial està protegida amb tecnologia de punta.
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- slider -->
-    <section class="relative bg-indigo-lightest-10">
+    <section class="relative">
         <div id="slider-1">
-            <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
-                <h2 class="white fs-l3 fw-900">Lorem ipsum dolor sit amet, consectetur</h2>
-                <p class="indigo-lightest fw-600 fs-m1 opacity-30 my-5">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor </p>
-                <a href="#" class="button-md bg-indigo white fs-s3 br-4 black fw-600 no-underline m-5">BUY NOW</a>
+            <!-- Slide 1: Introducció a l'Empresa -->
+            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center" 
+                style="background-image: url('../assets/images/foto_slide1.jpg');">
+                <h2 class="black fs-l3 fw-900">Qui som?</h2>
+                <p class="black fw-600 fs-m1 my-5">
+                    Som una empresa dedicada a oferir solucions digitals per a petites empreses. La nostra aplicació 
+                    ajuda a simplificar la gestió del teu inventari i agilitzar l’enviament de documents empresarials.
+                </p>
             </div>
-            <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
-                <h2 class="white fs-l3 fw-900">Lorem ipsum dolor sit amet, consectetur</h2>
-                <p class="indigo-lightest fw-600 fs-m1 opacity-30 my-5">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor </p>
-                <a href="#" class="button-md bg-indigo white fs-s3 br-4 black fw-600 no-underline m-5">BUY NOW</a>
+
+            <!-- Slide 2: Funcionalitats Principals -->
+            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center" 
+                style="background-image: url('../assets/images/foto_slide2.jpg');">
+                <h2 class="black fs-l3 fw-900">Funcionalitats que Marquen la Diferència</h2>
+                <p class="black fw-600 fs-m1  my-5">
+                    Controla el teu inventari en temps real, crea i envia factures en segons i accedeix a dades importants 
+                    des de qualsevol dispositiu. Tot això amb una interfície senzilla i fàcil d’utilitzar.
+                </p>
             </div>
-            <div class="p-10 md-p-l10 flex justify-center items-center flex-column text-center">
-                <h2 class="white fs-l3 fw-900">Lorem ipsum dolor sit amet, consectetur</h2>
-                <p class="indigo-lightest fw-600 fs-m1 opacity-30 my-5">Lorem ipsum dolor sit amet, consectetur
-                    adipiscing elit, sed do eiusmod tempor </p>
-                <a href="#" class="button-md bg-indigo white fs-s3 br-4 black fw-600 no-underline m-5">BUY NOW</a>
+
+            <!-- Slide 3: Beneficis per a les Empreses -->
+            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center" 
+                style="background-image: url('../assets/images/foto_slide3.jpg');">
+                <h2 class="black fs-l3 fw-900">Transforma el teu Negoci</h2>
+                <p class="black-lightest fw-600 fs-m1 my-5">
+                    Amb la nostra aplicació, pots estalviar temps i diners mentre millores l’eficiència operativa. 
+                    Confia en nosaltres per portar la teva empresa al següent nivell.
+                </p>
             </div>
         </div>
+
+        <!-- Botons de navegació -->
         <ul class="absolute list-none w-100pc flex justify-between top-50pc">
-            <li><button
-                    class="prev ml-10 br-round border-indigo-lightest indigo-lightest  bg-transparent flex justify-center items-center p-2 focus-indigo-lighter outline-none"><i
-                        data-feather="chevron-left"></i></button></li>
-            <li><button
-                    class="next mr-10 br-round border-indigo-lightest indigo-lightest  bg-transparent flex justify-center items-center p-2  focus-indigo-lighter outline-none"><i
-                        data-feather="chevron-right"></i></button></li>
+            <li>
+                <button
+                    class="prev ml-10 br-round border-indigo-lightest indigo-lightest bg-transparent flex justify-center items-center p-2 focus-indigo-lighter outline-none">
+                    <i data-feather="chevron-left"></i>
+                </button>
+            </li>
+            <li>
+                <button
+                    class="next mr-10 br-round border-indigo-lightest indigo-lightest bg-transparent flex justify-center items-center p-2 focus-indigo-lighter outline-none">
+                    <i data-feather="chevron-right"></i>
+                </button>
+            </li>
         </ul>
     </section>
+
 
     <!-- big text -->
     <section class="p-10 md-py-10">
         <div class="w-100pc md-w-70pc mx-auto py-10">
             <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
-                Lorem ipsum dolor sit amet, <span class="border-b bc-indigo bw-4"> consectetur</span> adipiscing elit,
-                sed do eiusmod tempor </h2>
-        </div>
-    </section>
-
-    <!-- product options -->
-    <section class="py-l10">
-        <div class="flex flex-column md-flex-row md-w-80pc mx-auto">
-            <div class="w-100pc md-w-50pc">
-                <div class="br-8 p-5 m-5 bg-indigo-lightest-10 pointer hover-scale-up-1 ease-300">
-                    <div class="inline-block bg-indigo indigo-lightest br-3 px-4 py-1 mb-10 fs-s4 uppercase">
-                        individual</div>
-                    <div class="indigo-lightest fw-600 fs-m1">Lorem ipsum <span class="opacity-30"> dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua.</span> </div>
-                    <a href="#" class="mt-10 button bg-black fs-s3 white no-underline">Read</a>
-                </div>
-            </div>
-            <div class="w-100pc md-w-50pc">
-                <div class="br-8 p-5 m-5 bg-indigo-lightest-10  pointer hover-scale-up-1 ease-300">
-                    <div class="inline-block bg-indigo indigo-lightest br-3 px-4 py-1 mb-10 fs-s4 uppercase">
-                        team</div>
-                    <div class="indigo-lightest fw-600 fs-m1">Lorem ipsum <span class="opacity-30"> dolor sit amet,
-                            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua.</span> </div>
-                    <a href="#" class="mt-10 button bg-black fs-s3 white no-underline">Read</a>
-
-                </div>
-            </div>
+                Simplifica la teva <span class="border-b bc-indigo bw-4"> empresa, </span> accelera el teu futur.</h2>
         </div>
     </section>
 
@@ -158,10 +161,9 @@
         <div class="p-10 flex flex-wrap">
             <div class="w-100pc md-w-50pc">
                 <div class="p-5">
-                    <h4 class="white fw-800 fs-l3 mb-5">Lorem Pricing</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
-                    <h4 class="white fw-600 fs-m2 mt-10">Companies trusts us.</h4>
+                    <h4 class="white fw-800 fs-l3 mb-5">Preus: </h4>
+                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Oferim dos plans únics per adaptar-se a les teves necessitats: el pla bàsic per a solucions essencials i el pla premium amb avantatges exclusius i serveis personalitzats.</div>
+                    <h4 class="white fw-600 fs-m2 mt-10">Companies que confien en nosaltres.</h4>
                     <div class="flex indigo-lightest opacity-50">
                         <div class="w-25pc">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.78 100" fill="currentColor">
@@ -209,59 +211,57 @@
             <div class="w-100pc md-w-25pc">
                 <div class="m-3 p-5 br-8 bg-indigo-lightest-10 overflow-hidden">
                     <div class="p-3">
-                        <h3 class="indigo">Free</h3>
-                        <div class="white flex items-center">$<span class="fs-l5 lh-1">0</span>/mo</div>
+                        <h3 class="indigo">Pla Bàsic</h3>
+                        <div class="white flex items-center">€<span class="fs-l5 lh-1">9</span>/mes</div>
                     </div>
                     <div class="p-3 indigo-lightest fw-400 fs-s1 lh-5">
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">1 user</span>
+                            <span class="opacity-50">2 usuaris</span>
                         </div>
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">100 visitors/month</span></div>
+                            <span class="opacity-50">1.000 productes per mes</span></div>
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">1 website</span></div>
+                            <span class="opacity-50">10GB d'emmagatzematge</span></div>
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">24x7 support</span></div>
+                            <span class="opacity-50">Suport bàsic</span></div>
                         <div>
-                            <i class="h-3" stroke-width="4" data-feather="x"></i>
-                            <span class="opacity-50">third party integration</span></div>
+                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <span class="opacity-50">Funcions basiques</span></div>
                     </div>
                     <div class="p-3">
-                        <button class="button full bg-black white  hover-opacity-100 hover-scale-up-1 ease-300">SIGN
-                            UP</button>
+                        <button class="button full bg-black white  hover-opacity-100 hover-scale-up-1 ease-300">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="w-100pc md-w-25pc">
                 <div class="m-3 p-5 br-8 bg-white overflow-hidden">
                     <div class="p-3">
-                        <h3 class="indigo">Pro</h3>
-                        <div class="black flex items-center">$<span class="fs-l5 lh-1">99</span>/mo</div>
+                        <h3 class="indigo">Pla Empresarial</h3>
+                        <div class="black flex items-center">€<span class="fs-l5 lh-1">99</span>/mes</div>
                     </div>
                     <div class="p-3 black fw-400 fs-s1 lh-5">
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50"> 5 user</span></div>
+                            <span class="opacity-50">10 usuaris</span></div>
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">10,000 visitors/month</span></div>
+                            <span class="opacity-50">10.000 productes per mes</span></div>
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">3 website</span></div>
+                            <span class="opacity-50">Emmagatzematge il·limitat</span></div>
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">24x7 support</span></div>
+                            <span class="opacity-50">suport 24/7</span></div>
                         <div>
                             <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">third party integration</span></div>
+                            <span class="opacity-50">Funcions avançades</span></div>
                     </div>
                     <div class="p-3">
-                        <button class="button full bg-indigo white hover-opacity-100 hover-scale-up-1 ease-300">SIGN
-                            UP</button>
+                        <button class="button full bg-indigo white hover-opacity-100 hover-scale-up-1 ease-300">Comprar</button>
                     </div>
                 </div>
             </div>
