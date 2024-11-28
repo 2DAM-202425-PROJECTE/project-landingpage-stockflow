@@ -388,17 +388,18 @@
         <section class="p-10 md-p-l5">
             <div class="br-8 bg-indigo-lightest-10 p-5 md-p-l5 flex flex-wrap md-justify-between md-items-center">
                 <div class="w-100pc md-w-33pc">
-                    <h2 class="white fs-m4 fw-800">Try Hook today</h2>
-                    <p class="fw-600 indigo-lightest opacity-40">Get first month free for commercial use. Forever free for
-                        open source products.</p>
+                    <h2 class="white fs-m4 fw-800">StockFlow esta amb tu</h2>
+                    <p class="fw-600 indigo-lightest opacity-40">Gaudeix de les ventatges que et proporciona el nostre equip. Ideal per optimitzar la gestió del teu inventari.</p>
                 </div>
                 <div class="w-100pc md-w-50pc">
                     <div class="flex my-5">
-                        <input type="text"
+                        <input id="emailInput"  type="text"
                             class="input-lg flex-grow-1 bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 br-r-0"
-                            placeholder="Email Address">
-                        <button class="button-lg bg-indigo indigo-lightest fw-300 fs-s3 br-l-0">Get Started</button>
+                            placeholder="Introdueix el teu email">
+                        <button id="subscribeButton" class="button-lg bg-indigo indigo-lightest fw-300 fs-s3 br-l-0">Engrescat</button>
                     </div>
+                    <!-- Mensaje de confirmación -->
+            <p id="confirmationMessage" class="text-sm mt-4 white opacity-0 transition-opacity duration-300"></p>
                 </div>
             </div>
         </section>
@@ -412,6 +413,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/newSubscription.js"></script>
 </body>
 
 </html>
