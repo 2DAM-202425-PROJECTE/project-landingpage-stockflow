@@ -11,6 +11,75 @@
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <style>
+        body {
+            font-family: 'Muli', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .faq-section {
+            padding: 2rem;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+        .faq-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            color: #333;
+        }
+        .faq-search {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 2rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #000;
+        }
+        .faq-item {
+            background: #fff;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .faq-question span {
+            font-size: 1.25rem;
+            color: #333;
+        }
+        .faq-answer {
+            display: none;
+            padding-top: 1rem;
+            color: #666;
+        }
+        .faq-item.active .faq-answer {
+            display: block;
+            color: #000;
+        }
+        .faq-favorite {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #ffcc00;
+        }
+        .no-results {
+            display: none;
+            text-align: center;
+            color: #666;
+            margin-top: 2rem;
+        }
+    </style>
 </head>
 <body>
 
@@ -21,6 +90,7 @@
     <section class="faq-section container" id="faq">
         <input type="text" id="faq-search" placeholder="Cerca una pregunta..." class="faq-search">
         <h1 class="faq-title">Preguntes Freqüents</h1>
+        
         <div class="faq-item">
             <div class="faq-question">
                 <span>Què és aquesta aplicació?</span>
@@ -30,45 +100,79 @@
                 Aquesta aplicació està dissenyada per ajudar empreses a gestionar inventaris, factures i enviaments de manera eficient.
             </div>
         </div>
+        
         <div class="faq-item">
             <div class="faq-question">
-                <span>Com puc accedir al meu compte?</span>
+                <span>Com puc crear una factura?</span>
                 <button class="faq-favorite">⭐</button>
             </div>
             <div class="faq-answer">
-                Pots accedir al teu compte des de la pàgina d'inici de sessió, utilitzant el teu correu electrònic i contrasenya.
+                Per crear una factura, aneu a la secció de factures i feu clic a "Crear nova factura". Ompliu els camps necessaris i deseu.
             </div>
         </div>
+        
         <div class="faq-item">
             <div class="faq-question">
-                <span>És compatible amb dispositius mòbils?</span>
+                <span>Quins tipus de pagament accepteu?</span>
                 <button class="faq-favorite">⭐</button>
             </div>
             <div class="faq-answer">
-                Sí, la nostra aplicació està optimitzada per funcionar en dispositius mòbils i ordinadors.
+                Acceptem pagaments amb targeta de crèdit, PayPal i transferència bancària.
             </div>
         </div>
+        
         <div class="faq-item">
             <div class="faq-question">
-                <span>Quin és el cost del servei?</span>
+                <span>Com puc contactar amb el suport tècnic?</span>
                 <button class="faq-favorite">⭐</button>
             </div>
             <div class="faq-answer">
-                Oferim diferents plans segons les teves necessitats. Pots consultar-los a la pàgina de preus.
+                Podeu contactar amb el nostre suport tècnic a través del formulari de contacte a la nostra pàgina web o enviant un correu electrònic a suport@empresa.com.
             </div>
         </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                <span>Hi ha alguna prova gratuïta disponible?</span>
+                <button class="faq-favorite">⭐</button>
+            </div>
+            <div class="faq-answer">
+                Sí, oferim una prova gratuïta de 30 dies per a tots els nous usuaris. Podeu registrar-vos a la nostra pàgina web per començar.
+            </div>
+        </div>
+        
+        <div class="no-results">No s'ha trobat cap resultat relacionat amb la cerca.</div>
     </section>
 
     <!-- Footer -->
-    <!-- Footer -->
-    <div id="footer-container"></div>
+    <div class="bg-black" id="footer-container"></div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
-    <script src="/js/faq.js"></script>
-    <script src="/js/main.js"></script>
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', () => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        document.getElementById('faq-search').addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            let hasResults = false;
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question span').textContent.toLowerCase();
+                if (question.includes(searchQuery)) {
+                    item.style.display = 'block';
+                    hasResults = true;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            document.querySelector('.no-results').style.display = hasResults ? 'none' : 'block';
+        });
+    </script>
     
 </body>
 </html>
