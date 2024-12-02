@@ -381,18 +381,15 @@
         </div>
 
         <!--Cookies-->
-        <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center">
-            <p class="text-sm">
+        <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; left: 0; width: 100%; background: #333; color: white; padding: 20px; z-index: 1000;">
+            <p style="margin: 0;">
                 Utilitzem cookies per millorar la teva experiència. Consulta la nostra 
-                <a href="../pagines/cookies.html" class="underline">Política de cookies</a>.
+                <a href="../pagines/cookies.html" style="color: lightblue;">Política de cookies</a>.
             </p>
-            <div>
-                <button id="accept-cookies" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
-                    Acceptar
-                </button>
-                <button id="reject-cookies" class="bg-red hover:bg-red-600 text-white px-4 py-2 rounded ml-2">
-                    Denegar
-                </button>
+            <div style="margin-top: 10px;">
+                <button id="acceptar" style="background: green; color: white; border: none; padding: 10px 20px; margin-right: 10px;">Acceptar</button>
+                <button id="rebutjar" style="background: red; color: white; border: none; padding: 10px 20px;">Rebutjar</button>
+                <button id="tancar" style="background: gray; color: white; border: none; padding: 10px 20px; margin-left: 10px;">Tancar</button>
             </div>
         </div>
 

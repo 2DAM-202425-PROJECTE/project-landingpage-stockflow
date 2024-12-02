@@ -1,49 +1,50 @@
-// Funció per verificar si la cookie de consentiment existeix
-function checkCookieConsent() {
-    const consent = getCookie("cookieConsent");
-    if (consent === "true") {
-        // Si l'usuari ja ha acceptat, amaga el banner
-        document.getElementById("cookie-banner").style.display = "none";
-    }
-}
-
-// Funció per obtenir el valor d'una cookie per nom
-function getCookie(name) {
-    const nameEq = name + "=";
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
-        if (c.indexOf(nameEq) === 0) return c.substring(nameEq.length, c.length);
-    }
-    return null;
-}
-
-// Funció per establir una cookie
+// Funció per establir una cookie amb nom, valor i durada en dies
 function setCookie(name, value, days) {
     const d = new Date();
-    d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000); // Calcula l'expiració
     const expires = "expires=" + d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
+    document.cookie = name + "=" + value + ";" + expires + ";path=/"; // Guarda la cookie
 }
 
-// Gestió de l'acceptació de cookies
-document.getElementById("accept-cookies").addEventListener("click", function() {
-    // Quan l'usuari accepta les cookies, es crea la cookie i amaga el banner
-    setCookie("cookieConsent", "true", 365);
-    document.getElementById("cookie-banner").classList.add("hidden");
-});
+// Funció per comprovar si una cookie existeix
+function getCookie(name) {
+    const nameEq = name + "=";
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let c = cookies[i].trim();
+        if (c.indexOf(nameEq) === 0) {
+            return c.substring(nameEq.length, c.length); // Retorna el valor de la cookie
+        }
+    }
+    return null; // Si no existeix, retorna null
+}
 
-// Gestió de la denegació de cookies (no guardar res)
-document.getElementById("reject-cookies").addEventListener("click", function() {
-    // Quan l'usuari rebutja, només s'amaga el banner sense guardar cap informació
-    document.getElementById("cookie-banner").classList.add("hidden");
-});
+// Comprova si ja existeix la cookie "cookieConsent"
+if (getCookie("cookieConsent") === "accepted" || getCookie("cookieConsent") === "rejected") {
+    // Si la cookie és "accepted", amaga el banner
+    document.getElementById("cookie-banner").style.display = "none";
+} else {
+    // Si no existeix, mostra el banner
+    document.getElementById("cookie-banner").style.display = "block";
+}
 
-// Comprova si l'usuari ja ha acceptat les cookies en la càrrega de la pàgina
-document.addEventListener("DOMContentLoaded", function() {
-    checkCookieConsent();
-});
+// Gestió del botó d'acceptar
+document.getElementById("acceptar").onclick = function() {
+    setCookie("cookieConsent", "accepted", 30); // Guarda la cookie durant 30 dies
+    document.getElementById("cookie-banner").style.display = "none"; // Amaga el banner
+};
+
+// Gestió del botó de rebutjar
+document.getElementById("rebutjar").onclick = function() {
+    setCookie("cookieConsent", "rejected", 30); // Opcionalment guarda "rejected"
+    document.getElementById("cookie-banner").style.display = "none"; // Amaga el banner
+};
+
+// Gestió del botó de tancar
+document.getElementById("tancar").onclick = function() {
+    document.getElementById("cookie-banner").style.display = "none"; // Només amaga el banner
+};
+
 
 
 $(document).ready(function () {
