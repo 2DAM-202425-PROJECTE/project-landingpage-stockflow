@@ -1,3 +1,22 @@
+
+document.addEventListener("DOMContentLoaded", function() {
+    const banner = document.getElementById("cookie-banner");
+    const acceptButton = document.getElementById("accept-cookies");
+
+    // Comprova si l'usuari ja ha acceptat les cookies
+    if (!localStorage.getItem("cookiesAccepted")) {
+        banner.classList.remove("hidden"); // Si no s'ha acceptat, mostra el banner
+    } else {
+        banner.classList.add("hidden"); // Si ja s'han acceptat, amaga el banner
+    }
+
+    // Afegeix un event listener per al botó d'acceptar
+    acceptButton.addEventListener("click", function() {
+        localStorage.setItem("cookiesAccepted", "true");
+        banner.classList.add("hidden"); // Afegir la classe hidden per amagar el banner
+    });
+});
+
 $(document).ready(function () {
 
   // toggle mobile menu
@@ -40,7 +59,6 @@ $(document).ready(function () {
   });
   
 });
-
 
 
 // Carregar navbar

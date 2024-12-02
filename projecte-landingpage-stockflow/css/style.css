@@ -13,6 +13,45 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+#cookie-banner {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Un color de prova */
+  color: #fff;
+  padding: 16px;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 1; /* per defecte visible */
+  visibility: visible; /* per defecte visible */
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* transició suaud */
+}
+
+#cookie-banner.hidden {
+  opacity: 0; /* amagar */
+  visibility: hidden; /* amagar */
+}
+#cookie-banner a {
+  text-decoration: underline;
+  color: #fff;
+}
+#cookie-banner button {
+  background-color: #28a745;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+#cookie-banner button:hover {
+  background-color: #218838;
+}
+
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -24,8 +63,6 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
@@ -94,5 +131,10 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+
+
+
 
 
