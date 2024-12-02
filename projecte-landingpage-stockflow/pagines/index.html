@@ -12,8 +12,9 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
+      
 </head>
 
 <body class="bg-black muli">
@@ -332,31 +333,30 @@
     </section>
 
     <!-- team -->
-<!-- team -->
-<section class="p-10 md-p-l5">
-    <h2 class="white fs-l3 fw-900 lh-1 my-9">El nostre equip</h2>
-    <div class="flex flex-wrap">
-        <div class="w-100pc md-w-50pc p-10">
-            <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
-                <img class="w-20pc br-round mb-4" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Roberto Ionut">
-                <p class="fw-600 white fs-m3 mt-3">Roberto Ionut</p>
-                <p class="fw-400 white fs-s1 mt-1">Apassionat per la tecnologia i la creació d'aplicacions innovadores.</p>
-                <p class="fw-400 white fs-s1 mt-1" >Dissenyador web i logística</p>
+    <section class="p-10 md-p-l5" id="team">
+        <h2 class="white fs-l3 fw-900 lh-1 my-9">El nostre equip</h2>
+        <div class="flex flex-wrap">
+            <div class="w-100pc md-w-50pc p-10">
+                <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-20pc br-round mb-4" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Roberto Ionut">
+                    <p class="fw-600 white fs-m3 mt-3">Roberto Ionut</p>
+                    <p class="fw-400 white fs-s1 mt-1">Apassionat per la tecnologia i la creació d'aplicacions innovadores.</p>
+                    <p class="fw-400 white fs-s1 mt-1" >Dissenyador web i logística</p>
 
+                </div>
+            </div>
+            <div class="w-100pc md-w-50pc p-10">
+                <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+                    <img class="w-20pc br-round mb-4" src="https://randomuser.me/api/portraits/men/5.jpg" alt="Vladislav Goncear">
+                    <p class="fw-600 white fs-m3 mt-3">Vladislav Goncear</p>
+                    <p class="fw-400 white fs-s1 mt-1">M'apassiona millorar l'experiència d'usuari i dissenyar solucions atractives i funcionals.</p>
+                    <p class="fw-400 white fs-s1 mt-1" >Dissenyador web</p>
+
+
+                </div>
             </div>
         </div>
-        <div class="w-100pc md-w-50pc p-10">
-            <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
-                <img class="w-20pc br-round mb-4" src="https://randomuser.me/api/portraits/men/5.jpg" alt="Vladislav Goncear">
-                <p class="fw-600 white fs-m3 mt-3">Vladislav Goncear</p>
-                <p class="fw-400 white fs-s1 mt-1">M'apassiona millorar l'experiència d'usuari i dissenyar solucions atractives i funcionals.</p>
-                <p class="fw-400 white fs-s1 mt-1" >Dissenyador web</p>
-
-
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
 
         <!-- subscribe -->
@@ -380,9 +380,21 @@
         </section>
     </div>
 
+
+    <!--Cookies-->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center">
+        <p class="text-sm">
+            Utilitzem cookies per millorar la teva experiència. Consulta la nostra 
+            <a href="../pagines/cookies.html" class="underline">Política de cookies</a>.
+        </p>
+        <button id="accept-cookies" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+            Acceptar
+        </button>
+    </div>
+    
+
     <!-- Footer -->
     <div id="footer-container"></div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
