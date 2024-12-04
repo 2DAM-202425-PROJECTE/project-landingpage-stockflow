@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>StockFlow</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="icon" href="../assets/images/StockFLowLogo.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/shorthandcss@1.1.1/dist/shorthand.min.css" />
@@ -13,17 +14,77 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        body {
+            font-family: 'Muli', sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+        .bg-indigo-lightest-10 {
+            background-color: #f0f4f8;
+        }
+        .text-black {
+            color: #000;
+        }
+        .text-white {
+            color: #fff;
+        }
+        .bg-white {
+            background-color: #fff;
+        }
+        .bg-gray-800 {
+            background-color: #333;
+        }
+        .text-gray-700 {
+            color: #4a4a4a;
+        }
+        .text-gray-800 {
+            color: #333;
+        }
+        .opacity-80 {
+            opacity: 0.8;
+        }
+        .opacity-40 {
+            opacity: 0.4;
+        }
+        .opacity-0 {
+            opacity: 0;
+        }
+        .transition-opacity {
+            transition: opacity 0.3s;
+        }
+        .duration-300 {
+            transition-duration: 0.3s;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .hover\:bg-green-600:hover {
+            background-color: #48bb78;
+        }
+        footer {
+            background-color: #2c3e50; /* Color específico para el footer */
+            color: #fff;
+        }
+        footer a {
+            color: #fff;
+        }
+        footer a:hover {
+            color: #ccc;
+        }
+    </style>
 </head>
 
-<body class="bg-black muli">
+<body class="bg-white text-black">
 
     <!-- Navbar -->
     <div id="navbar-container"></div>
 
-
-    <!-- hero section -->
+    <!-- Hero Section -->
     <section id="home" class="relative min-h-100vh flex justify-start items-center bg-black">
         <!-- Video de fondo -->
         <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover z-0">
@@ -37,28 +98,27 @@
         <!-- Contenido de la sección -->
         <div class="relative z-20 mx-5 md:mx-l5">
             <div class="inline-block br-round bg-gray-30 gray-lightest p-2 fs-s2 mb-5">
-                <div class="inline-block bg-gray gray-lightest br-round px-3 py-1 mr-3 fs-s3">Integració de inteligencia antificial</div>
-                S'incorporara en la nostra aplicació proximament
+                <div class="inline-block bg-gray gray-lightest br-round px-3 py-1 mr-3 fs-s3">Integració de intel·ligència artificial</div>
+                S'incorporarà a la nostra aplicació pròximament
             </div>
             <div>
-                <h1 class="white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900">Organitzar el teu inventari<br />En mes comoditat</h1>    
+                <h1 class="text-white fs-l3 lh-2 md-fs-xl1 md-lh-1 fw-900">Organitzar el teu inventari<br />En més comoditat</h1>    
             </div>
         </div>
     </section>
     
-
 
     <!-- features -->
     <section id="features" class="p-10 md-p-l5">
         <div class="flex flex-column md-flex-row mx-auto">
             <!-- Feature 1: Gestión de Inventarios -->
             <div class="w-100pc md-w-40pc">
-                <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5">
+                <div class="br-8 p-5 m-5 bg-white">
+                    <div class="flex justify-center items-center bg-indigo-lightest-10 text-black w-l5 h-l5 br-round mb-5">
                         <i data-feather="inbox" class="w-l5"></i>
                     </div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Gestió d'Inventaris</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                    <h4 class="text-black fw-600 fs-m3 mb-5">Gestió d'Inventaris</h4>
+                    <div class="text-gray-700 fw-600 fs-m1 lh-3 opacity-80">
                         La nostra aplicació t'ofereix una manera senzilla i eficient de gestionar l'inventari de la teva empresa. 
                         Controla les existències, evita desquadraments i pren decisions més informades amb dades en temps real.
                     </div>
@@ -67,12 +127,12 @@
     
             <!-- Feature 2: Documentació Automàtica -->
             <div class="w-100pc md-w-40pc">
-                <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5">
+                <div class="br-8 p-5 m-5 bg-white">
+                    <div class="flex justify-center items-center bg-indigo-lightest-10 text-black w-l5 h-l5 br-round mb-5">
                         <i data-feather="cpu" class="w-l5"></i>
                     </div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Documentació Automàtica</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                    <h4 class="text-black fw-600 fs-m3 mb-5">Documentació Automàtica</h4>
+                    <div class="text-gray-700 fw-600 fs-m1 lh-3 opacity-80">
                         Simplifica l'enviament i la gestió dels teus documents. Amb la nostra eina, podràs generar i enviar 
                         factures, albarans i informes en qüestió de segons.
                     </div>
@@ -81,12 +141,12 @@
     
             <!-- Feature 3: Informació Segura -->
             <div class="w-100pc md-w-40pc">
-                <div class="br-8 p-5 m-5">
-                    <div class="flex justify-center items-center bg-indigo-lightest-10 white w-l5 h-l5 br-round mb-5">
+                <div class="br-8 p-5 m-5 bg-white">
+                    <div class="flex justify-center items-center bg-indigo-lightest-10 text-black w-l5 h-l5 br-round mb-5">
                         <i data-feather="database" class="w-l5"></i>
                     </div>
-                    <h4 class="white fw-600 fs-m3 mb-5">Informació Segura</h4>
-                    <div class="indigo-lightest fw-600 fs-m1 lh-3 opacity-50">
+                    <h4 class="text-black fw-600 fs-m3 mb-5">Informació Segura</h4>
+                    <div class="text-gray-700 fw-600 fs-m1 lh-3 opacity-80">
                         Totes les teves dades es guarden de forma segura al núvol. Accedeix a la informació des de qualsevol lloc, 
                         amb la tranquil·litat que la teva informació empresarial està protegida amb tecnologia de punta.
                     </div>
@@ -94,67 +154,59 @@
             </div>
         </div>
     </section>
-    
 
     <!-- slider -->
     <section id="condicions" class="relative">
-        <div id="slider-1">
+        <div id="slider-1" class="relative overflow-hidden">
             <!-- Slide 1: Introducció a l'Empresa -->
-            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center" 
+            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center br-8 shadow-lg transition-all duration-300"
                 style="background-image: url('../assets/images/foto_slide1.jpg');">
-                <h2 class="black fs-l3 fw-900">Qui som?</h2>
-                <p class="black fw-600 fs-m1 my-5">
-                    Som una empresa dedicada a oferir solucions digitals per a petites empreses. La nostra aplicació 
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 br-8"></div>
+                <h2 class="text-white fs-l3 fw-900 z-10">Qui som?</h2>
+                <p class="text-white fw-600 fs-m1 my-5 z-10">
+                    Som una empresa dedicada a oferir solucions digitals per a petites empreses. La nostra aplicació
                     ajuda a simplificar la gestió del teu inventari i agilitzar l’enviament de documents empresarials.
                 </p>
             </div>
-
+    
             <!-- Slide 2: Funcionalitats Principals -->
-            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center" 
+            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center br-8 shadow-lg transition-all duration-300"
                 style="background-image: url('../assets/images/foto_slide2.jpg');">
-                <h2 class="black fs-l3 fw-900">Funcionalitats que Marquen la Diferència</h2>
-                <p class="black fw-600 fs-m1  my-5">
-                    Controla el teu inventari en temps real, crea i envia factures en segons i accedeix a dades importants 
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 br-8"></div>
+                <h2 class="text-white fs-l3 fw-900 z-10">Funcionalitats que Marquen la Diferència</h2>
+                <p class="text-white fw-600 fs-m1  my-5 z-10">
+                    Controla el teu inventari en temps real, crea i envia factures en segons i accedeix a dades importants
                     des de qualsevol dispositiu. Tot això amb una interfície senzilla i fàcil d’utilitzar.
                 </p>
             </div>
-
+    
             <!-- Slide 3: Beneficis per a les Empreses -->
-            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center" 
+            <div class="relative p-10 md:p-l10 flex justify-center items-center flex-column text-center min-h-50vh bg-cover bg-center br-8 shadow-lg transition-all duration-300"
                 style="background-image: url('../assets/images/foto_slide3.jpg');">
-                <h2 class="black fs-l3 fw-900">Transforma el teu Negoci</h2>
-                <p class="black-lightest fw-600 fs-m1 my-5">
-                    Amb la nostra aplicació, pots estalviar temps i diners mentre millores l’eficiència operativa. 
+                <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 br-8"></div>
+                <h2 class="text-white fs-l3 fw-900 z-10">Transforma el teu Negoci</h2>
+                <p class="text-white fw-600 fs-m1 my-5 z-10">
+                    Amb la nostra aplicació, pots estalviar temps i diners mentre millores l’eficiència operativa.
                     Confia en nosaltres per portar la teva empresa al següent nivell.
                 </p>
             </div>
         </div>
-
-        <!-- Botons de navegació -->
-        <ul class="absolute list-none w-100pc flex justify-between top-50pc">
-            <li>
-                <button
-                    class="prev ml-10 br-round border-indigo-lightest indigo-lightest bg-transparent flex justify-center items-center p-2 focus-indigo-lighter outline-none">
+    
+        <!-- Botons de navegació centrados -->
+        <ul class="absolute list-none w-full h-full flex justify-center items-center top-0 left-0">
+            <li class="absolute left-5">
+                <button class="prev br-round border-white text-white bg-transparent flex justify-center items-center p-2 focus:outline-none">
                     <i data-feather="chevron-left"></i>
                 </button>
             </li>
-            <li>
-                <button
-                    class="next mr-10 br-round border-indigo-lightest indigo-lightest bg-transparent flex justify-center items-center p-2 focus-indigo-lighter outline-none">
+            <li class="absolute right-5">
+                <button class="next br-round border-white text-white bg-transparent flex justify-center items-center p-2 focus:outline-none">
                     <i data-feather="chevron-right"></i>
                 </button>
             </li>
         </ul>
     </section>
-
-
-    <!-- big text -->
-    <section class="p-10 md-py-10">
-        <div class="w-100pc md-w-70pc mx-auto py-10">
-            <h2 class="white fs-l2 md-fs-xl1 fw-900 lh-2">
-                Simplifica la teva <span class="border-b bc-indigo bw-4"> empresa, </span> accelera el teu futur.</h2>
-        </div>
-    </section>
+    
 
 
     <!-- pricing -->
@@ -162,10 +214,10 @@
         <div class="p-10 flex flex-wrap">
             <div class="w-100pc md-w-50pc">
                 <div class="p-5">
-                    <h4 class="white fw-800 fs-l3 mb-5">Preus: </h4>
-                    <div class="indigo-lightest fw-600 fs-m1 opacity-50">Oferim dos plans únics per adaptar-se a les teves necessitats: el pla bàsic per a solucions essencials i el pla premium amb avantatges exclusius i serveis personalitzats.</div>
-                    <h4 class="white fw-600 fs-m2 mt-10">Companies que confien en nosaltres.</h4>
-                    <div class="flex indigo-lightest opacity-50">
+                    <h4 class="black fw-800 fs-l3 mb-5">Preus: </h4>
+                    <div class="black fw-600 fs-m1 opacity-50">Oferim dos plans únics per adaptar-se a les teves necessitats: el pla bàsic per a solucions essencials i el pla premium amb avantatges exclusius i serveis personalitzats.</div>
+                    <h4 class="black fw-600 fs-m2 mt-10">Companies que confien en nosaltres.</h4>
+                    <div class="flex black opacity-50">
                         <div class="w-25pc">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 177.78 100" fill="currentColor">
                                 <path
@@ -210,59 +262,59 @@
                 </div>
             </div>
             <div class="w-100pc md-w-25pc">
-                <div class="m-3 p-5 br-8 bg-indigo-lightest-10 overflow-hidden">
+                <div class="m-3 p-5 br-8 bg-gray-800 overflow-hidden">
                     <div class="p-3">
-                        <h3 class="indigo">Pla Bàsic</h3>
+                        <h3 class="white">Pla Bàsic</h3>
                         <div class="white flex items-center">€<span class="fs-l5 lh-1">9</span>/mes</div>
                     </div>
-                    <div class="p-3 indigo-lightest fw-400 fs-s1 lh-5">
+                    <div class="p-3 white fw-400 fs-s1 lh-5">
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
                             <span class="opacity-50">2 usuaris</span>
                         </div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
                             <span class="opacity-50">1.000 productes per mes</span></div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
                             <span class="opacity-50">10GB d'emmagatzematge</span></div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
                             <span class="opacity-50">Suport bàsic</span></div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
                             <span class="opacity-50">Funcions basiques</span></div>
                     </div>
                     <div class="p-3">
-                        <button class="button full bg-black white  hover-opacity-100 hover-scale-up-1 ease-300">Comprar</button>
+                        <button class="button full bg-white black  hover-opacity-100 hover-scale-up-1 ease-300">Comprar</button>
                     </div>
                 </div>
             </div>
             <div class="w-100pc md-w-25pc">
-                <div class="m-3 p-5 br-8 bg-white overflow-hidden">
+                <div class="m-3 p-5 br-8 bg-gray-800 overflow-hidden">
                     <div class="p-3">
-                        <h3 class="indigo">Pla Empresarial</h3>
-                        <div class="black flex items-center">€<span class="fs-l5 lh-1">99</span>/mes</div>
+                        <h3 class="white">Pla Empresarial</h3>
+                        <div class="white flex items-center">€<span class="fs-l5 lh-1">99</span>/mes</div>
                     </div>
                     <div class="p-3 black fw-400 fs-s1 lh-5">
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">10 usuaris</span></div>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
+                            <span class=" white opacity-50">10 usuaris</span></div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">10.000 productes per mes</span></div>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
+                            <span class="white opacity-50">10.000 productes per mes</span></div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">Emmagatzematge il·limitat</span></div>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
+                            <span class="white opacity-50">Emmagatzematge il·limitat</span></div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">suport 24/7</span></div>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
+                            <span class="white opacity-50">suport 24/7</span></div>
                         <div>
-                            <i class="h-3 indigo" stroke-width="4" data-feather="check"></i>
-                            <span class="opacity-50">Funcions avançades</span></div>
+                            <i class="h-3 white" stroke-width="4" data-feather="check"></i>
+                            <span class="white opacity-50">Funcions avançades</span></div>
                     </div>
                     <div class="p-3">
-                        <button class="button full bg-indigo white hover-opacity-100 hover-scale-up-1 ease-300">Comprar</button>
+                        <button class="button full bg-white black hover-opacity-100 hover-scale-up-1 ease-300">Comprar</button>
                     </div>
                 </div>
             </div>
@@ -270,126 +322,163 @@
     </section>
 
     <!-- testimonials -->
-    <section id="testimonials" class="p-10 md-p-l5">
-        <h2 class="white fs-l3 fw-900 lh-1 my-9">El que diuen els nostres clients ...</h2>
+    <section id="testimonials" class="p-5 md-p-l5">
+        <h2 class="text-black fs-l3 fw-800 lh-5 my-9">El que diuen els nostres clients ...</h2>
         <div id="slider-2">
             <div class="px-3">
-                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
-                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
-                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">"El servei que ens ha ofert aquesta empresa ha estat excepcional. Hem millorat significativament els nostres processos gràcies a la seva tecnologia innovadora."</p>
+                <div class=" block no-underline p-5 br-8 hover-bg-gray-800 hover-scale-up-1 ease-300 bg-gray-800 border-2 border-gray-300 rounded-lg shadow-lg">
+                    <span class="fs-l5 lh-1 black opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 text-white opacity-80 italic ls-wider">"El servei que ens ha ofert aquesta empresa ha estat excepcional. Hem millorat significativament els nostres processos gràcies a la seva tecnologia innovadora."</p>
                     <div class="flex items-center my-5">
-                        <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
+                        <div class="block br-round border bc-white bw-4 w-l3 h-l3"><img class="br-round"
                                 src="https://randomuser.me/api/portraits/men/46.jpg" alt=""></div>
                         <div class="ml-4 fs-s1">
-                            <div class="indigo-lightest">Mahnaz Farzin</div>
-                            <div class="indigo-lightest opacity-20">Product Manager, ABC Corp</div>
+                            <div class="text-white">Mahnaz Farzin</div>
+                            <div class="text-white opacity-60">Product Manager, ABC Corp</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="px-3">
-                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
-                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
-                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">"Estem encantats amb els resultats. La nostra productivitat ha augmentat gràcies a la solució que ens van proporcionar. Recomanem totalment aquesta empresa!"</p>
+                <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300 bg-white border-2 border-gray-300 rounded-lg shadow-lg">
+                    <span class="fs-l5 lh-1 black opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 text-black opacity-80 italic ls-wider">"Estem encantats amb els resultats. La nostra productivitat ha augmentat gràcies a la solució que ens van proporcionar. Recomanem totalment aquesta empresa!"</p>
                     <div class="flex items-center my-5">
                         <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
                                 src="https://randomuser.me/api/portraits/men/47.jpg" alt=""></div>
                         <div class="ml-4 fs-s1">
-                            <div class="indigo-lightest">John Smith</div>
-                            <div class="indigo-lightest opacity-20">CEO, XYZ Ltd</div>
+                            <div class="text-black">John Smith</div>
+                            <div class="text-black opacity-60">CEO, XYZ Ltd</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="px-3">
-                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
-                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
-                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">"Una experiència increïble des del primer moment. L'equip és altament professional i sempre disponible per resoldre qualsevol dubte. Ens han ajudat a aconseguir els nostres objectius."</p>
+                <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300 bg-white border-2 border-gray-300 rounded-lg shadow-lg">
+                    <span class="fs-l5 lh-1 black opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 text-black opacity-80 italic ls-wider">"Una experiència increïble des del primer moment. L'equip és altament professional i sempre disponible per resoldre qualsevol dubte. Ens han ajudat a aconseguir els nostres objectius."</p>
                     <div class="flex items-center my-5">
                         <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
                                 src="https://randomuser.me/api/portraits/men/48.jpg" alt=""></div>
                         <div class="ml-4 fs-s1">
-                            <div class="indigo-lightest">Sarah Johnson</div>
-                            <div class="indigo-lightest opacity-20">Marketing Director, DEF Group</div>
+                            <div class="text-black">Sarah Johnson</div>
+                            <div class="text-black opacity-60">Marketing Director, DEF Group</div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="px-3">
-                <div class="p-8 br-8 bg-indigo-lightest-10 relative">
-                    <span class="fs-l5 lh-1 white opacity-10 absolute top-0 z--1">&#10077;</span>
-                    <p class="fw-600 fs-m1 indigo-lightest opacity-80 italic ls-wider">"Són un soci de confiança que sempre compleix amb les seves promeses. Els nostres equips han experimentat una millora notable gràcies a la seva solució."</p>
+                <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300 bg-white border-2 border-gray-300 rounded-lg shadow-lg">
+                    <span class="fs-l5 lh-1 black opacity-10 absolute top-0 z--1">&#10077;</span>
+                    <p class="fw-600 fs-m1 text-black opacity-80 italic ls-wider">"Són un soci de confiança que sempre compleix amb les seves promeses. Els nostres equips han experimentat una millora notable gràcies a la seva solució."</p>
                     <div class="flex items-center my-5">
                         <div class="block br-round border bc-black bw-4 w-l3 h-l3"><img class="br-round"
                                 src="https://randomuser.me/api/portraits/men/49.jpg" alt=""></div>
                         <div class="ml-4 fs-s1">
-                            <div class="indigo-lightest">Carlos Martínez</div>
-                            <div class="indigo-lightest opacity-20">Operations Manager, GHI Enterprises</div>
+                            <div class="text-black">Carlos Martínez</div>
+                            <div class="text-black opacity-60">Operations Manager, GHI Enterprises</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    
+    
 
     <!-- team -->
 <!-- team -->
-<section id="AboutUs" class="p-10 md-p-l5">
-    <h2 class="white fs-l3 fw-900 lh-1 my-9">El nostre equip</h2>
+<section id="AboutUs" class="p-10 md-p-l5 bg-white">
+    <h2 class="text-black fs-l3 fw-900 lh-1 my-9">El nostre equip</h2>
     <div class="flex flex-wrap">
+        <!-- Primer Miembro del equipo -->
         <div class="w-100pc md-w-50pc p-10">
-            <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+            <div class="block no-underline p-10 br-16 hover-bg-gray-800 hover-scale-up-1 ease-300 bg-gray-800 border-2 border-gray-300 rounded-lg shadow-lg">
                 <img class="w-20pc br-round mb-4" src="https://randomuser.me/api/portraits/men/1.jpg" alt="Roberto Ionut">
-                <p class="fw-600 white fs-m3 mt-3">Roberto Ionut</p>
-                <p class="fw-400 white fs-s1 mt-1">Apassionat per la tecnologia i la creació d'aplicacions innovadores.</p>
-                <p class="fw-400 white fs-s1 mt-1" >Dissenyador web i logística</p>
-
+                <p class="fw-600 text-white fs-m3 mt-3">Roberto Ionut</p>
+                <p class="fw-400 text-white fs-s1 mt-1">Apassionat per la tecnologia i la creació d'aplicacions innovadores.</p>
+                <p class="fw-400 text-white fs-s1 mt-1">Dissenyador web i logística</p>
             </div>
         </div>
-        <div class="w-100pc md-w-50pc p-10">
-            <div class="block no-underline p-5 br-8 hover-bg-indigo-lightest-10 hover-scale-up-1 ease-300">
+
+        <!-- Segundo Miembro del equipo -->
+        <div class="w-200pc md-w-50pc p-10">
+            <div class="block no-underline p-10 br-16 hover-bg-gray-800 hover-scale-up-1 ease-300 bg-gray-800 border-2 border-gray-300 rounded-lg shadow-lg">
                 <img class="w-20pc br-round mb-4" src="https://randomuser.me/api/portraits/men/5.jpg" alt="Vladislav Goncear">
-                <p class="fw-600 white fs-m3 mt-3">Vladislav Goncear</p>
-                <p class="fw-400 white fs-s1 mt-1">M'apassiona millorar l'experiència d'usuari i dissenyar solucions atractives i funcionals.</p>
-                <p class="fw-400 white fs-s1 mt-1" >Dissenyador web</p>
-
-
+                <p class="fw-600 text-white fs-m3 mt-3">Vladislav Goncear</p>
+                <p class="fw-400 text-white fs-s1 mt-1">M'apassiona millorar l'experiència d'usuari i dissenyar solucions atractives i funcionals.</p>
+                <p class="fw-400 text-white fs-s1 mt-1">Dissenyador web</p>
             </div>
         </div>
     </div>
 </section>
 
 
+
         <!-- subscribe -->
         <section class="p-10 md-p-l5">
-            <div class="br-8 bg-indigo-lightest-10 p-5 md-p-l5 flex flex-wrap md-justify-between md-items-center">
+            <div class="br-16 bg-gray-800 p-5 md-p-l5 flex flex-wrap md-justify-between md-items-center border-4 border-gray-300 rounded-lg shadow-lg">
                 <div class="w-100pc md-w-33pc">
-                    <h2 class="white fs-m4 fw-800">StockFlow esta amb tu</h2>
-                    <p class="fw-600 indigo-lightest opacity-40">Gaudeix de les ventatges que et proporciona el nostre equip. Ideal per optimitzar la gestió del teu inventari.</p>
+                    <h2 class="text-white fs-m4 fw-800">StockFlow està amb tu</h2>
+                    <p class="fw-600 text-white opacity-80">
+                        Gaudeix de les ventatges que et proporciona el nostre equip. Ideal per optimitzar la gestió del teu inventari.
+                    </p>
                 </div>
                 <div class="w-100pc md-w-50pc">
-                    <div class="flex my-5">
-                        <input id="emailInput"  type="text"
-                            class="input-lg flex-grow-1 bw-0 fw-200 bg-indigo-lightest-10 white ph-indigo-lightest focus-white opacity-80 fs-s3 py-5 br-r-0"
+                    <div class="flex my-5 flex-wrap">
+                        <input id="emailInput" type="text"
+                            class="input-lg flex-grow-1 bw-0 fw-200 bg-white text-black fs-s3 py-5 br-r-0"
                             placeholder="Introdueix el teu email">
-                        <button id="subscribeButton" class="button-lg bg-indigo indigo-lightest fw-300 fs-s3 br-l-0">Engrescat</button>
+                        <button id="subscribeButton"
+                            class="button-lg bg-gray-800 text-white fs-s3 br-l-0 px-6 py-5 whitespace-nowrap">
+                            Engrescat
+                        </button>
                     </div>
                     <!-- Mensaje de confirmación -->
-            <p id="confirmationMessage" class="text-sm mt-4 white opacity-0 transition-opacity duration-300"></p>
+                    <p id="confirmationMessage" class="text-sm mt-4 text-white opacity-0 transition-opacity duration-100"></p>
                 </div>
             </div>
         </section>
+        
+        
+        
     </div>
+
+
+    <!--Cookies-->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center">
+        <p class="text-sm">
+            Utilitzem cookies per millorar la teva experiència. Consulta la nostra 
+            <a href="../pagines/cookies.html" class="underline">Política de cookies</a>.
+        </p>
+        <button id="accept-cookies" class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded">
+            Acceptar
+        </button>
+    </div>
+    
 
     <!-- Footer -->
     <div id="footer-container"></div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/newSubscription.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+    $(document).ready(function(){
+      $('#slider-1').slick({
+        dots: true,  // Añadir puntos de navegación
+        arrows: true,  // Mostrar las flechas de navegación
+        autoplay: true,  // Hacer el slide automáticamente
+        autoplaySpeed: 5000,  // Intervalo entre slides
+        fade: true,  // Desvanecimiento entre slides
+        speed: 1000,  // Velocidad de transición
+      });
+    });
+    </script>
 </body>
 
 </html>
