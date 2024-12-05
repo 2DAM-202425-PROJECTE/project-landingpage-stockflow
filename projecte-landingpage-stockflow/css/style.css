@@ -251,6 +251,29 @@ section {
   white-space: nowrap;
 }
 
+/* Estilo base para las tarjetas de testimonios */
+#slider-2 .block {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* Para controlar el z-index */
+  z-index: 0; /* Por defecto, en el nivel base */
+}
+
+/* Hover: Agrandar y traer al frente */
+#slider-2 .block:hover {
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+  z-index: 10; /* Prioridad para que quede sobre las demás */
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar */
+}
+
+/* Asegurar que el título esté siempre visible */
+#testimonials h2 {
+  position: relative;
+  z-index: 20; /* Superior al hover de las tarjetas */
+  background: white; /* Fondo blanco para asegurar legibilidad si algo pasa detrás */
+  padding: 0 10px; /* Espacio para evitar que las letras toquen el borde */
+}
+
+
 
 
 /* Responsividad */

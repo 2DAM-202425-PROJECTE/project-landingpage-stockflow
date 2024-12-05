@@ -1,55 +1,46 @@
-// Seleccionamos los elementos del DOM
-const emailInput = document.getElementById('emailInput');
-const subscribeButton = document.getElementById('subscribeButton');
-const confirmationMessage = document.getElementById('confirmationMessage');
+// Inicializa EmailJS con tu User ID real
+(function () {
+    emailjs.init("myLmsBtQsqLpXEpLz"); // Sustituye "TU_USER_ID" con tu User ID real de EmailJS
+})();
 
-// Evento para gestionar el clic en el botón de suscripción
-subscribeButton.addEventListener('click', async (e) => {
-    e.preventDefault(); // Evitar que la página se recargue
-    
-    // Validar que el campo de email no esté vacío
-    const email = emailInput.value.trim();
-    if (!validateEmail(email)) {
-        confirmationMessage.textContent = 'Si us plau, introdueix una adreça de correu electrònic vàlida.';
-        confirmationMessage.classList.remove('opacity-0');
-        confirmationMessage.classList.add('text-red-400');
+// Obtén elementos del DOM
+const emailInput = document.getElementById("emailInput");
+const subscribeButton = document.getElementById("subscribeButton");
+const confirmationMessage = document.getElementById("confirmationMessage");
+
+// Añade evento al botón
+subscribeButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    // Validar que el correo no esté vacío
+    const emailValue = emailInput.value.trim();
+    if (!emailValue) {
+        confirmationMessage.textContent = "Si us plau, introdueix un correu electrònic vàlid.";
+        confirmationMessage.classList.remove("opacity-0");
+        confirmationMessage.classList.add("text-red-500");
         return;
     }
 
-    // Mostrar mensaje de envío
-    confirmationMessage.textContent = 'Enviant la teva sol·licitud...';
-    confirmationMessage.classList.remove('text-red-400', 'opacity-0');
-    confirmationMessage.classList.add('text-yellow-400');
+    // Envía el correo con EmailJS
+    emailjs.send("service_6qpo055", "template_198caza", {
+        email: emailValue  // Aquí estás pasando el correo electrónico recibido
+    }).then(
+        function (response) {
+            console.log("SUCCESS!", response.status, response.text);
+            // Mostrar mensaje de éxito
+            confirmationMessage.textContent = "Gràcies! Hem rebut el teu email.";
+            confirmationMessage.classList.remove("opacity-0");
+            confirmationMessage.classList.add("text-green-500");
 
-    try {
-        // Enviar datos al backend
-        const response = await fetch('https://api.stockflow.com/newsletter/subscribe', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ email }),
-        });
-
-        if (!response.ok) {
-            throw new Error('Error en la subscripció. Torna-ho a intentar.');
+            // Limpia el campo de entrada
+            emailInput.value = "";
+        },
+        function (error) {
+            console.error("FAILED...", error);
+            // Mostrar mensaje de error
+            confirmationMessage.textContent = "Hi ha hagut un error. Torna-ho a intentar.";
+            confirmationMessage.classList.remove("opacity-0");
+            confirmationMessage.classList.add("text-red-500");
         }
-
-        // Respuesta exitosa
-        confirmationMessage.textContent = `Gràcies per subscriure't al nostre newsletter, ${email}!`;
-        confirmationMessage.classList.remove('text-yellow-400');
-        confirmationMessage.classList.add('text-green-400');
-        emailInput.value = ''; // Limpiar el campo de email
-    } catch (error) {
-        // Error en el envío
-        confirmationMessage.textContent = 'Hi ha hagut un problema. Si us plau, torna-ho a intentar.';
-        confirmationMessage.classList.remove('text-yellow-400');
-        confirmationMessage.classList.add('text-red-400');
-    }
+    );
 });
-
-// Función para validar emails
-function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-}
