@@ -1,21 +1,65 @@
 
-document.addEventListener("DOMContentLoaded", function() {
-    const banner = document.getElementById("cookie-banner");
-    const acceptButton = document.getElementById("accept-cookies");
-
-    // Comprova si l'usuari ja ha acceptat les cookies
-    if (!localStorage.getItem("cookiesAccepted")) {
-        banner.classList.remove("hidden"); // Si no s'ha acceptat, mostra el banner
-    } else {
-        banner.classList.add("hidden"); // Si ja s'han acceptat, amaga el banner
-    }
-
-    // Afegeix un event listener per al botó d'acceptar
-    acceptButton.addEventListener("click", function() {
-        localStorage.setItem("cookiesAccepted", "true");
-        banner.classList.add("hidden"); // Afegir la classe hidden per amagar el banner
-    });
+// Carregar navbar
+fetch('../components/navbar.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('navbar-container').innerHTML = data;
 });
+
+// Carregar footer
+fetch('../components/footer.html')
+.then(response => response.text())
+.then(data => {
+    document.getElementById('footer-container').innerHTML = data;
+});
+
+
+// Funció per establir una cookie amb nom, valor i durada en dies
+function setCookie(name, value, days) {
+    const d = new Date();
+    d.setTime(d.getTime() + days * 24 * 60 * 60 * 1000); // Calcula l'expiració
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = name + "=" + value + ";" + expires + ";path=/"; // Guarda la cookie
+}
+
+// Funció per comprovar si una cookie existeix
+function getCookie(name) {
+    const nameEq = name + "=";
+    const cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+        let c = cookies[i].trim();
+        if (c.indexOf(nameEq) === 0) {
+            return c.substring(nameEq.length, c.length); // Retorna el valor de la cookie
+        }
+    }
+    return null; // Si no existeix, retorna null
+}
+
+// Comprova si ja existeix la cookie "cookieConsent"
+if (getCookie("cookieConsent") === "accepted" || getCookie("cookieConsent") === "rejected") {
+    // Si la cookie és "accepted", amaga el banner
+    document.getElementById("cookie-banner").style.display = "none";
+} else {
+    // Si no existeix, mostra el banner
+    document.getElementById("cookie-banner").style.display = "block";
+}
+
+// Gestió del botó d'acceptar
+document.getElementById("acceptar").onclick = function() {
+    setCookie("cookieConsent", "accepted", 30); // Guarda la cookie durant 30 dies
+    document.getElementById("cookie-banner").style.display = "none"; // Amaga el banner
+};
+
+// Gestió del botó de rebutjar
+document.getElementById("rebutjar").onclick = function() {
+    setCookie("cookieConsent", "rejected", 30); // Opcionalment guarda "rejected"
+    document.getElementById("cookie-banner").style.display = "none"; // Amaga el banner
+};
+
+// Gestió del botó de tancar
+document.getElementById("tancar").onclick = function() {
+    document.getElementById("cookie-banner").style.display = "none"; // Només amaga el banner
+};
 
 $(document).ready(function () {
 
@@ -61,19 +105,7 @@ $(document).ready(function () {
 });
 
 
-// Carregar navbar
-fetch('../components/navbar.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('navbar-container').innerHTML = data;
-});
 
-// Carregar footer
-fetch('../components/footer.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('footer-container').innerHTML = data;
-});
 
 
 
