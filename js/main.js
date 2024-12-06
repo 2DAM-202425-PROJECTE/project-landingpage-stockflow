@@ -1,17 +1,37 @@
+// Funció per carregar components
+function loadComponent(path, containerId, callback) {
+    fetch(path)
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById(containerId).innerHTML = data;
+            if (callback) callback();  // Crida la funció després de carregar el component
+        })
+        .catch(error => console.error(`Error carregant ${path}:`, error));
+}
 
-// Carregar navbar
-fetch('../components/navbar.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('navbar-container').innerHTML = data;
-});
+// Funció per inicialitzar la Navbar
+function initializeNavbar() {
+    const toggleButton = document.querySelector('[data-toggle="toggle-nav"]');
+    const navItems = document.querySelector('#nav-items');
 
-// Carregar footer
-fetch('../components/footer.html')
-.then(response => response.text())
-.then(data => {
-    document.getElementById('footer-container').innerHTML = data;
-});
+    if (toggleButton && navItems) {
+        toggleButton.addEventListener('click', function (e) {
+            e.preventDefault();
+            navItems.classList.toggle('hidden'); // Alterna la visibilitat del menú
+        });
+    }
+
+    // Inicialitzar les icones de Feather (si les utilitzes)
+    if (typeof feather !== 'undefined') {
+        feather.replace();  // Reemplaça les icones de Feather
+    }
+}
+
+// Carregar la Navbar i inicialitzar-la
+loadComponent('/components/navbar.html', 'navbar-container', initializeNavbar);
+
+// Carregar el Footer
+loadComponent('/components/footer.html', 'footer-container');
 
 
 // Funció per establir una cookie amb nom, valor i durada en dies
